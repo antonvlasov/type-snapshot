@@ -57,6 +57,7 @@ func Bootstrap(types []TypeInfo, emdebPkg, dst, suffix, dstPkg string, leaveTemp
 
 	execArgs := []string{
 		"run",
+		"-mod=mod",
 		mainPath,
 		"-embed_pkg", emdebPkg,
 		"-dst_pkg", dstPkg,
@@ -66,6 +67,7 @@ func Bootstrap(types []TypeInfo, emdebPkg, dst, suffix, dstPkg string, leaveTemp
 
 	cmd.Stdout = f
 	cmd.Stderr = os.Stderr
+	cmd.Dir = path
 	if err = cmd.Run(); err != nil {
 		return err
 	}
