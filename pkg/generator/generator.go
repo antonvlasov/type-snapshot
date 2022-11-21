@@ -240,7 +240,7 @@ func (r *Generator) getAnonymousObjectDefinition(t reflect.Type) string {
 			return "chan " + r.getObjName(t.Elem())
 		}
 	case reflect.Struct:
-		panic("not implemented")
+		return r.generateStructDefinition(t)
 	case reflect.Func:
 		return r.generateFuncDefinition(t)
 	default:
