@@ -3,7 +3,7 @@ package generator
 import "reflect"
 
 const (
-	generatorPkg = "github.com/antonvlasov/type-snapshot/pkg/generator"
+	generatorPkg = "github.com/antonvlasov/type-snapshot"
 )
 
 var typesOrder = []reflect.Kind{
