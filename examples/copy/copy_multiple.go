@@ -6,6 +6,7 @@ type (
 
 	Main_pkgAOld struct {
 		value string
+		rec   Main_pkgRecursiveOld
 	}
 
 	Main_pkgMainStructOld struct {
@@ -13,6 +14,11 @@ type (
 		Field2 PkgbAOld
 		field3 PkgbBOld
 		field4 Main_pkgAOld
+	}
+
+	Main_pkgRecursiveOld struct {
+		normalField string
+		recField    *Main_pkgRecursiveOld
 	}
 
 	PkgaAOld struct {

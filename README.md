@@ -52,13 +52,13 @@ type (
 ```
 To achieve this the following command was used:
 ```bash
-type_snapshot -paths "examples/main_pkg.TopStruct" -dst ~/simple_copy/copy/copy.go -suffix Old
+type_snapshot -paths "examples/main_pkg.TopStruct" -dst "examples/copy/copy_simple.go" -suffix Old
 ```
 ### Multiple source types
 It is also possible to snapshot multiple types from different modules and output them to the same file.
 The following command was used to produce content of [copy.go](examples/copy/copy.go) from multiple types defined in [examples](examples):
 ```bash
-type_snapshot -paths "examples/main_pkg.MainStruct examples/main_pkg.A examples/pkgb.UnUsedA examples/pkgb.UnUsedB" -dst examples/copy/copy.go -suffix Old
+type_snapshot -paths "examples/main_pkg.MainStruct examples/main_pkg.A examples/pkgb.UnUsedA examples/pkgb.UnUsedB" -dst examples/copy/copy_multiple.go -suffix Old
 ```
 ### Motivation
 It is often required to copy struct definition manually when writing a database migration to preserve the state of the type at the moment or when writing a client
